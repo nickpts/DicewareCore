@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DicewareCore\DicewareCore.csproj" />
+    <ProjectReference Include="..\..\src\DicewareCore\DicewareCore.csproj" />
   </ItemGroup>
 
 </Project>

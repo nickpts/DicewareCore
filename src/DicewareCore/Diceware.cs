@@ -34,10 +34,14 @@ namespace DicewareCore
 		public Diceware(IRNGVenturaServiceProvider prng) => this.prng = prng;
 
 
+		public void Dispose()
+		{
+			prng?.Dispose();
+		}
 
+		#region Private implementation
 
-
-		private static MemoryStream SerializeToStream(object objectType)
+		private MemoryStream SerializeToStream(object objectType)
 		{
 			MemoryStream stream = new MemoryStream();
 			IFormatter formatter = new BinaryFormatter();
@@ -45,9 +49,6 @@ namespace DicewareCore
 			return stream;
 		}
 
-		public void Dispose()
-		{
-			prng?.Dispose();
-		}
+		#endregion
 	}
 }
