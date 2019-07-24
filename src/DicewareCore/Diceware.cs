@@ -1,10 +1,9 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
-
+using System.Text;
+using System.Transactions;
 using Ventura;
 using Ventura.Interfaces;
 
@@ -28,10 +27,7 @@ namespace DicewareCore
 		/// </summary>
 		public Diceware()
 		{
-			var ticks = System.Environment.TickCount;
-			var seed = SHA256.Create().ComputeHash(BitConverter.GetBytes(ticks));
-
-			var seedStream = SerializeToStream(seed);
+			var seedStream = SerializeToStream(SeedGenerator.GetSeed());
 
 			prng = RNGVenturaServiceProviderFactory.Create(
 				seedStream, 
@@ -39,7 +35,13 @@ namespace DicewareCore
 				ReseedEntropySourceGroup.Full);
 		}
 
-		public Diceware(IRNGVenturaServiceProvider prng) => this.prng = prng;
+		public Diceware(IRNGVenturaServiceProvider prng)
+		{
+			if (prng == null)
+				throw new ArgumentNullException(nameof(prng));
+
+			this.prng = prng;
+		}
 
 		/// <summary>
 		/// Generates a passphrase using the Diceware technique
@@ -51,9 +53,32 @@ namespace DicewareCore
 			if (wordNo <= 0 || wordNo >= 20)
 				throw new ArgumentException(nameof(wordNo));
 
-			return default;
+			var dictionary = Converter.ExtractPairs(language);
+			var password = new StringBuilder();
+
+			for (int i = 0; i < wordNo; i++)
+			{
+				int roll = MakeRoll();
+				password.Append(dictionary[roll]);
+			}
+
+			return password.ToString();
 		}
 
+		private int MakeRoll()
+		{
+			int index = 0;
+			int multiplier = 10_000;
+
+			for (int i = 0; i < 5; i++)
+			{
+
+				index += prng.Next(1, 7) * multiplier;
+				multiplier /= 10;
+			}
+
+			return index;
+		}
 
 		public void Dispose()
 		{

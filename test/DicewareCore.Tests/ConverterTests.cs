@@ -15,7 +15,6 @@ namespace Tests
 		public void Converter_Returns_Proper_WordList()
 		{
 			var list = Converter.ExtractPairs(Language.Spanish);
-
 		}
 	}
 }
