@@ -9,8 +9,7 @@ using Ventura.Interfaces;
 
 namespace DicewareCore
 {
-	/*
-	 * Diceware™
+	/* Diceware™
 	 *
 	 *
 	 */
@@ -21,6 +20,11 @@ namespace DicewareCore
 		/// </summary>
 		private readonly IRNGVenturaServiceProvider prng;
 
+		/// <summary>
+		/// Initialises Ventura and seed stream. By default Ventura is
+		/// created with a seed from a SHA256 hash in a memory stream,
+		/// AES and both local and remote entropy sources
+		/// </summary>
 		public Diceware()
 		{
 			var seedStream = SerializeToStream(SHA256.Create());
@@ -28,7 +32,7 @@ namespace DicewareCore
 			prng = RNGVenturaServiceProviderFactory.Create(
 				seedStream, 
 				Cipher.Aes, 
-				ReseedEntropySourceGroup.Remote);
+				ReseedEntropySourceGroup.Full);
 		}
 
 		public Diceware(IRNGVenturaServiceProvider prng) => this.prng = prng;
