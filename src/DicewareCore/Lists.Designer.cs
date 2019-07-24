@@ -60,24 +60,170 @@ namespace DicewareCore {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to 11111	0
+        ///11112	1
+        ///11113	2
+        ///11114	3
+        ///11115	4
+        ///11116	5
+        ///11121	6
+        ///11122	7
+        ///11123	8
+        ///11124	9
+        ///11125	10
+        ///11126	11
+        ///11131	12
+        ///11132	13
+        ///11133	14
+        ///11134	15
+        ///11135	16
+        ///11136	17
+        ///11141	18
+        ///11142	19
+        ///11143	20
+        ///11144	21
+        ///11145	22
+        ///11146	23
+        ///11151	24
+        ///11152	25
+        ///11153	26
+        ///11154	27
+        ///11155	28
+        ///11156	29
+        ///11161	30
+        ///11162	31
+        ///11163	32
+        ///11164	33
+        ///11165	34
+        ///11166	35
+        ///11211	36
+        ///11212	37
+        ///11213	38
+        ///11214	39
+        ///11215	40
+        ///11216	41
+        ///11221	42
+        ///11222	43
+        ///11223	44
+        ///11224	45
+        ///11225	46
+        ///11226	47
+        ///11231	48
+        ///11232	49
+        ///11233	50
+        ///11234	51
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string basque {
             get {
                 return ResourceManager.GetString("basque", resourceCulture);
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to -----BEGIN PGP SIGNED MESSAGE-----
+        ///Hash: SHA512
+        ///
+        ///11111  1r
+        ///11112  2n
+        ///11113  3r
+        ///11114  4t
+        ///11115  5e
+        ///11116  6e
+        ///11121  7e
+        ///11122  8e
+        ///11123  9e
+        ///11124  10e
+        ///11125  20e
+        ///11126  30e
+        ///11131  40e
+        ///11132  50e
+        ///11133  60e
+        ///11134  70e
+        ///11135  80e
+        ///11136  90e
+        ///11141  100e
+        ///11142  200e
+        ///11143  300e
+        ///11144  400e
+        ///11145  500e
+        ///11146  600e
+        ///11151  700e
+        ///11152  800e
+        ///11153  900e
+        ///11154  1000e
+        ///11155  2000e
+        ///11156  3000e
+        ///11161  4000e
+        ///11162  5000e
+        ///11163  6000e
+        ///11164  7000e
+        ///11165  8000e
+        ///11166  9000e
+        ///11211  abatible
+        ///11212  abriac
+        ///11213  abrigall
+        ///112 [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string catalan {
             get {
                 return ResourceManager.GetString("catalan", resourceCulture);
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string czech {
             get {
                 return ResourceManager.GetString("czech", resourceCulture);
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to -----BEGIN PGP SIGNED MESSAGE-----
+        ///Hash: SHA256
+        ///
+        ///11111	a
+        ///11112	aa
+        ///11113	aaa
+        ///11114	aaaa
+        ///11115	ab
+        ///11116	abbed
+        ///11121	abc
+        ///11122	abe
+        ///11123	aborre
+        ///11124	ac
+        ///11125	acces
+        ///11126	ad
+        ///11131	adel
+        ///11132	adept
+        ///11133	adle
+        ///11134	adlyd
+        ///11135	advare
+        ///11136	advent
+        ///11141	advis
+        ///11142	ae
+        ///11143	aerob
+        ///11144	af
+        ///11145	afart
+        ///11146	afasi
+        ///11151	afbar
+        ///11152	afbud
+        ///11153	afgav
+        ///11154	afgik
+        ///11155	afgiv
+        ///11156	afgud
+        ///11161	afhop
+        ///11162	afise
+        ///11163	afkog
+        ///11164	afkom
+        ///11165	aflad
+        ///11166	aflod
+        ///11211	aflyd
+        ///11212	a [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string danish {
             get {
                 return ResourceManager.GetString("danish", resourceCulture);
@@ -104,13 +250,186 @@ namespace DicewareCore {
             }
         }
         
-
+        /// <summary>
+        ///   Looks up a localized string similar to 11111	0
+        ///11112	1
+        ///11113	2
+        ///11114	3
+        ///11115	4
+        ///11116	5
+        ///11121	6
+        ///11122	7
+        ///11123	8
+        ///11124	9
+        ///11125	10
+        ///11126	11
+        ///11131	12
+        ///11132	13
+        ///11133	14
+        ///11134	15
+        ///11135	16
+        ///11136	17
+        ///11141	18
+        ///11142	19
+        ///11143	20
+        ///11144	21
+        ///11145	22
+        ///11146	23
+        ///11151	24
+        ///11152	25
+        ///11153	26
+        ///11154	27
+        ///11155	28
+        ///11156	29
+        ///11161	30
+        ///11162	31
+        ///11163	32
+        ///11164	33
+        ///11165	34
+        ///11166	35
+        ///11211	36
+        ///11212	37
+        ///11213	38
+        ///11214	39
+        ///11215	40
+        ///11216	41
+        ///11221	42
+        ///11222	43
+        ///11223	44
+        ///11224	45
+        ///11225	46
+        ///11226	47
+        ///11231	48
+        ///11232	49
+        ///11233	50
+        ///11234	51
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string dutch {
+            get {
+                return ResourceManager.GetString("dutch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111	0
+        ///11112	1
+        ///11113	2
+        ///11114	3
+        ///11115	4
+        ///11116	5
+        ///11121	6
+        ///11122	7
+        ///11123	8
+        ///11124	9
+        ///11125	10
+        ///11126	11
+        ///11131	12
+        ///11132	13
+        ///11133	14
+        ///11134	15
+        ///11135	16
+        ///11136	17
+        ///11141	18
+        ///11142	19
+        ///11143	20
+        ///11144	21
+        ///11145	22
+        ///11146	23
+        ///11151	24
+        ///11152	25
+        ///11153	26
+        ///11154	27
+        ///11155	28
+        ///11156	29
+        ///11161	30
+        ///11162	31
+        ///11163	32
+        ///11164	33
+        ///11165	34
+        ///11166	35
+        ///11211	36
+        ///11212	37
+        ///11213	38
+        ///11214	39
+        ///11215	40
+        ///11216	41
+        ///11221	42
+        ///11222	43
+        ///11223	44
+        ///11224	45
+        ///11225	46
+        ///11226	47
+        ///11231	48
+        ///11232	49
+        ///11233	50
+        ///11234	51
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string esperanto {
+            get {
+                return ResourceManager.GetString("esperanto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111	aabe
+        ///11112	aabits
+        ///11113	aadam
+        ///11114	aadel
+        ///11115	aader
+        ///11116	aadlik
+        ///11121	aaloe
+        ///11122	aamen
+        ///11123	aar
+        ///11124	aas
+        ///11125	aasama
+        ///11126	aasima
+        ///11131	aasta
+        ///11132	aastak
+        ///11133	abajas
+        ///11134	abakus
+        ///11135	abar
+        ///11136	abee
+        ///11141	abhaas
+        ///11142	abi
+        ///11143	abielu
+        ///11144	abil
+        ///11145	ablas
+        ///11146	abort
+        ///11151	absats
+        ///11152	abt
+        ///11153	abtiss
+        ///11154	abu
+        ///11155	action
+        ///11156	adaa
+        ///11161	adagio
+        ///11162	ad hoc
+        ///11163	adra
+        ///11164	adrik
+        ///11165	aduma
+        ///11166	advent
+        ///11211	adverb
+        ///11212	aed
+        ///11213	aedik
+        ///11214	a [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string estonian {
             get {
                 return ResourceManager.GetString("estonian", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111  aalio       11241  aaveet      11411  ahtako      11541  aisa
+        ///11112  aalto       11242  aavin       11412  ahtaus      11542  aisan
+        ///11113  aaltoa      11243  ab          11413  ahti        11543  aisat
+        ///11114  aamen       11244  abbey       11414  ahto        11544  aistia
+        ///11115  aamu        11245  abbeya      11415  ahven       11545  aistin
+        ///11116  aamua       11246  abi         11416  ahvo        11546  aistit
+        ///11121  aamuja      11251  abissa      11421  aidit       11551  aita
+        ///11122  aamuni  [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string finnish {
             get {
                 return ResourceManager.GetString("finnish", resourceCulture);
@@ -126,22 +445,243 @@ namespace DicewareCore {
                 return ((byte[])(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111 0
+        ///11112 1
+        ///11113 2
+        ///11114 3
+        ///11115 4
+        ///11116 5
+        ///11121 6
+        ///11122 7
+        ///11123 8
+        ///11124 9
+        ///11125 10
+        ///11126 11
+        ///11131 12
+        ///11132 13
+        ///11133 14
+        ///11134 15
+        ///11135 16
+        ///11136 17
+        ///11141 18
+        ///11142 19
+        ///11143 20
+        ///11144 21
+        ///11145 22
+        ///11146 23
+        ///11151 24
+        ///11152 25
+        ///11153 26
+        ///11154 27
+        ///11155 28
+        ///11156 29
+        ///11161 30
+        ///11162 31
+        ///11163 32
+        ///11164 33
+        ///11165 34
+        ///11166 35
+        ///11211 36
+        ///11212 37
+        ///11213 38
+        ///11214 39
+        ///11215 40
+        ///11216 41
+        ///11221 42
+        ///11222 43
+        ///11223 44
+        ///11224 45
+        ///11225 46
+        ///11226 47
+        ///11231 48
+        ///11232 49
+        ///11233 50
+        ///11234 51
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string german {
             get {
                 return ResourceManager.GetString("german", resourceCulture);
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to 11111 !
+        ///11112 !!
+        ///11113 !!!
+        ///11114 &quot;&quot;&quot;&quot;
+        ///11115 #
+        ///11116 ##
+        ///11121 ###
+        ///11122 $
+        ///11123 $$
+        ///11124 $$$
+        ///11125 %
+        ///11126 %%
+        ///11131 %%%
+        ///11132 &amp;
+        ///11133 (
+        ///11134 ()
+        ///11135 )
+        ///11136 *
+        ///11141 **
+        ///11142 ***
+        ///11143 +
+        ///11144 ++
+        ///11145 +++
+        ///11146 -
+        ///11151 --
+        ///11152 ---
+        ///11153 0
+        ///11154 1
+        ///11155 10
+        ///11156 100
+        ///11161 1000
+        ///11162 101
+        ///11163 11
+        ///11164 111
+        ///11165 1111
+        ///11166 12
+        ///11211 123
+        ///11212 1234
+        ///11213 13
+        ///11214 14
+        ///11215 1492
+        ///11216 15
+        ///11221 1500
+        ///11222 16
+        ///11223 1600
+        ///11224 17
+        ///11225 1700
+        ///11226 18
+        ///11231 1800
+        ///11232 19
+        ///11233 1900
+        ///11234 1910
+        ///11235 1920
+        ///11236 1925
+        ///1 [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string hungarian_diceware {
             get {
                 return ResourceManager.GetString("hungarian_diceware", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111 0
+        ///11112 1
+        ///11113 2
+        ///11114 3
+        ///11115 4
+        ///11116 5
+        ///11121 6
+        ///11122 7
+        ///11123 8
+        ///11124 9
+        ///11125 10
+        ///11126 11
+        ///11131 12
+        ///11132 13
+        ///11133 14
+        ///11134 15
+        ///11135 16
+        ///11136 17
+        ///11141 18
+        ///11142 19
+        ///11143 20
+        ///11144 21
+        ///11145 22
+        ///11146 23
+        ///11151 24
+        ///11152 25
+        ///11153 26
+        ///11154 27
+        ///11155 28
+        ///11156 29
+        ///11161 30
+        ///11162 31
+        ///11163 32
+        ///11164 33
+        ///11165 34
+        ///11166 35
+        ///11211 36
+        ///11212 37
+        ///11213 38
+        ///11214 39
+        ///11215 40
+        ///11216 41
+        ///11221 42
+        ///11222 43
+        ///11223 44
+        ///11224 45
+        ///11225 46
+        ///11226 47
+        ///11231 48
+        ///11232 49
+        ///11233 50
+        ///11234 51
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string italian {
             get {
                 return ResourceManager.GetString("italian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111	0
+        ///11112	1
+        ///11113	10
+        ///11114	100
+        ///11115	1000
+        ///11116	101
+        ///11121	11
+        ///11122	111
+        ///11123	1111
+        ///11124	12
+        ///11125	123
+        ///11126	1234
+        ///11131	13
+        ///11132	14
+        ///11133	15
+        ///11134	1500
+        ///11135	16
+        ///11136	1600
+        ///11141	17
+        ///11142	1700
+        ///11143	18
+        ///11144	1800
+        ///11145	19
+        ///11146	1900
+        ///11151	1910
+        ///11152	1920
+        ///11153	1925
+        ///11154	1930
+        ///11155	1935
+        ///11156	1940
+        ///11161	1945
+        ///11162	1950
+        ///11163	1955
+        ///11164	1960
+        ///11165	1965
+        ///11166	1970
+        ///11211	1975
+        ///11212	1980
+        ///11213	1985
+        ///11214	1990
+        ///11215	1991
+        ///11216	1992
+        ///11221	1993
+        ///11222	1994
+        ///11223	1995
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string japanese {
+            get {
+                return ResourceManager.GetString("japanese", resourceCulture);
             }
         }
         
@@ -155,16 +695,179 @@ namespace DicewareCore {
             }
         }
         
-
+        /// <summary>
+        ///   Looks up a localized string similar to 11111 абажур
+        ///11112 абаз
+        ///11113 абак
+        ///11114 абака
+        ///11115 аббат
+        ///11116 абзац
+        ///11121 аблаут
+        ///11122 аборт
+        ///11123 абрис
+        ///11124 абсент
+        ///11125 абсида
+        ///11126 абсурд
+        ///11131 абулиЪ
+        ///11132 абхаз
+        ///11133 абшид
+        ///11134 аванс
+        ///11135 авар
+        ///11136 аварец
+        ///11141 авариЪ
+        ///11142 аварка
+        ///11143 авгиев
+        ///11144 авгур
+        ///11145 август
+        ///11146 авеню
+        ///11151 авизо
+        ///11152 авось
+        ///11153 аврал
+        ///11154 аврора
+        ///11155 авто
+        ///11156 автол
+        ///11161 автор
+        ///11162 авуары
+        ///11163 ага
+        ///11164 агава
+        ///11165 агалит
+        ///11166 агамиЪ
+        ///11211 агамы
+        ///11212 агат
+        ///11213 аген [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string russian {
             get {
                 return ResourceManager.GetString("russian", resourceCulture);
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to -----BEGIN PGP SIGNED MESSAGE-----
+        ///Hash: SHA1
+        ///
+        ///
+        ///Este archivo DW-Español-1.txt contiene una lista original de 7.776
+        ///palabras distintas que facilita a usuarios hispanoparlantes generar
+        ///frases de paso fuertes,siguiendo la metodología de
+        ///Diceware(http://world.std.com/~reinhold/diceware.html).		
+        ///
+        ///Copyright © 2003 by Manuel Palao, CISM, CISA (manuel@palao.com). 
+        ///			
+        ///Reservados todos los derechos, salvo la autorización explícita que
+        ///figura a continuación:			
+        ///Se autoriza a copiar, distribuir y/o modifi [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string spanish {
             get {
                 return ResourceManager.GetString("spanish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11111 =
+        ///11112 ==
+        ///11113 ===
+        ///11114 -
+        ///11115 --
+        ///11116 ---
+        ///11121 ;
+        ///11122 :
+        ///11123 :-(
+        ///11124 :-)
+        ///11125 :(
+        ///11126 :)
+        ///11131 !
+        ///11132 !!
+        ///11133 !!!
+        ///11134 ?
+        ///11135 ??
+        ///11136 ???
+        ///11141 &quot;&quot;&quot;&quot;
+        ///11142 (
+        ///11143 ()
+        ///11144 )
+        ///11145 @
+        ///11146 $
+        ///11151 $$
+        ///11152 $$$
+        ///11153 *
+        ///11154 **
+        ///11155 ***
+        ///11156 &amp;
+        ///11161 #
+        ///11162 ##
+        ///11163 ###
+        ///11164 %
+        ///11165 %%
+        ///11166 %%%
+        ///11211 +
+        ///11212 ++
+        ///11213 +++
+        ///11214 0
+        ///11215 1
+        ///11216 10
+        ///11221 100
+        ///11222 1000
+        ///11223 101
+        ///11224 11
+        ///11225 111
+        ///11226 1111
+        ///11231 12
+        ///11232 123
+        ///11233 12 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string swedish {
+            get {
+                return ResourceManager.GetString("swedish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sürüm: 20 Temmuz 2007 - Ayrıntılı bilgi için http://dicewaretr.110mb.com sitesine başvurun. - Mert Dirik
+        ///------------------------------------------
+        ///11111	0
+        ///11112	1
+        ///11113	2
+        ///11114	3
+        ///11115	4
+        ///11116	5
+        ///11121	6
+        ///11122	7
+        ///11123	8
+        ///11124	9
+        ///11125	10
+        ///11126	11
+        ///11131	12
+        ///11132	13
+        ///11133	14
+        ///11134	15
+        ///11135	16
+        ///11136	17
+        ///11141	18
+        ///11142	19
+        ///11143	20
+        ///11144	21
+        ///11145	22
+        ///11146	23
+        ///11151	24
+        ///11152	25
+        ///11153	26
+        ///11154	27
+        ///11155	28
+        ///11156	29
+        ///11161	30
+        ///11162	31
+        ///11163	32
+        ///11164	33
+        ///11165	34
+        ///11166	35
+        ///11211	36
+        ///11 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string turkish {
+            get {
+                return ResourceManager.GetString("turkish", resourceCulture);
             }
         }
     }

@@ -14,7 +14,7 @@ namespace Tests
 		[Test]
 		public void Converter_Returns_Proper_WordList()
 		{
-			var list = Converter.ExtractPairs(Language.Bulgarian);
+			var list = Converter.ExtractPairs(Language.Spanish);
 
 		}
 	}

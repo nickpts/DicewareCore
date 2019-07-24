@@ -118,16 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bulgarian" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\bulgarian.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="diceware_wordlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\diceware.wordlist.asc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="catalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\catalan.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="pinyin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\pinyin.wordlist;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="basque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\basque.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="catalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\catalan.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="czech" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\czech.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="danish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\danish.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="diceware_latin_txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\diceware_latin.txt.asc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dutch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\dutch.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="estonian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\estonian.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="finnish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\finnish.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="francais_wordlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\francais.wordlist.asc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="german" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\german.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="hungarian_diceware" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\hungarian-diceware.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="italian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\italian.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="russian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\russian.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="spanish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\spanish.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="esperanto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\esperanto.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="japanese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\japanese.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="swedish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\swedish.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="turkish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\turkish.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

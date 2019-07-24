@@ -2,29 +2,23 @@
 {
 	public enum Language
 	{
-		Bulgarian,
+		Basque,
 		Catalan,
 		Chinese,
 		Czech,
 		Danish,
-		German,
+		Dutch,
 		English,
 		Esperanto,
-		Spanish,
 		Estonian,
 		French,
+		German,
 		Hungarian,
 		Italian,
 		Japanese,
 		Latin,
-		Maori,
-		Norwegian,
-		Dutch,
-		Polish,
-		Portuguese,
+		Spanish,
 		Russian,
-		Slovak,
-		Slovenian,
 		Swedish,
 		Turkish
 	}

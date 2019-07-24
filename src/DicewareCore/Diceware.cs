@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -27,7 +28,10 @@ namespace DicewareCore
 		/// </summary>
 		public Diceware()
 		{
-			var seedStream = SerializeToStream(SHA256.Create());
+			var ticks = System.Environment.TickCount;
+			var seed = SHA256.Create().ComputeHash(BitConverter.GetBytes(ticks));
+
+			var seedStream = SerializeToStream(seed);
 
 			prng = RNGVenturaServiceProviderFactory.Create(
 				seedStream, 
@@ -36,6 +40,19 @@ namespace DicewareCore
 		}
 
 		public Diceware(IRNGVenturaServiceProvider prng) => this.prng = prng;
+
+		/// <summary>
+		/// Generates a passphrase using the Diceware technique
+		/// </summary>
+		/// <param name="wordNo">number of words to generated</param>
+		/// <param name="language">language </param>
+		public string Create(int wordNo, Language language = Language.English)
+		{
+			if (wordNo <= 0 || wordNo >= 20)
+				throw new ArgumentException(nameof(wordNo));
+
+			return default;
+		}
 
 
 		public void Dispose()
