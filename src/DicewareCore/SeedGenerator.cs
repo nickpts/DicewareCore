@@ -1,20 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
+using System.Threading.Tasks;
+
+using Ventura.Accumulator;
+using Ventura.Accumulator.EntropyExtractors;
+using Ventura.Accumulator.EntropyExtractors.Remote;
+using Ventura.Interfaces;
 
 namespace DicewareCore
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	public class SeedGenerator
 	{
 		public static byte[] GetSeed()
 		{
 			var newHash = ComputeNew(new byte[32], EnvironmentTickCount());
 			newHash = ComputeNew(newHash, RngComputed());
+			newHash = ComputeNew(newHash, ProcessEntropy());
 
-			return ComputeNew(newHash, ProcessEntropy());
+			return ComputeNew(newHash, HotBitsEntropy());
 		}
 
 		public static byte[] ComputeNew(byte[] existingBytes, byte[] newBytes)
@@ -40,18 +47,42 @@ namespace DicewareCore
 
 		public static byte[] ProcessEntropy()
 		{
-			Process process = Process.GetCurrentProcess();
-			process.Refresh();
+			var extractor = new ProcessSeedExtractor(new StubEventEmitter {SourceNumber = 0});
+			return extractor.Data().Invoke();
+		}
 
-			var pTime = BitConverter.GetBytes(process.TotalProcessorTime.Ticks).Take(6);
-			var uTime = BitConverter.GetBytes(process.UserProcessorTime.Ticks).Take(6);
-			var memory = BitConverter.GetBytes(process.VirtualMemorySize64).Take(6);
-			var pMemory = BitConverter.GetBytes(process.PagedMemorySize64).Take(6);
-			var wMemory = BitConverter.GetBytes(process.WorkingSet64).Take(6);
-
-			var total = pTime.Concat(uTime).Concat(memory).Concat(pMemory).Concat(wMemory).ToArray();
-
-			return total;
+		public static byte[] HotBitsEntropy()
+		{
+			var extractor = new HotBitsSeedExtractor(new StubEventEmitter() { SourceNumber = 1});
+			return extractor.Data().Invoke();
 		}
 	}
+
+	public class ProcessSeedExtractor : ProcessEntropyExtractor
+	{
+		public ProcessSeedExtractor(IEventEmitter eventEmitter) : base(eventEmitter)
+		{
+		}
+
+		public Func<byte[]> Data() => base.ExtractEntropicData();
+	}
+
+	public class HotBitsSeedExtractor : HotBitsExtractor
+	{
+		public HotBitsSeedExtractor(IEventEmitter eventEmitter) : base(eventEmitter)
+		{
+		}
+
+		public Func<byte[]> Data() => base.ExtractEntropicData();
+	}
+
+	public class StubEventEmitter : IEventEmitter {
+		public Task<Event> Execute(Func<byte[]> extractionLogic)
+		{
+			throw new NotImplementedException();
+		}
+
+		public int SourceNumber { get; set; }
+	}
+
 }
