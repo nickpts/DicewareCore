@@ -12,6 +12,7 @@ namespace DicewareCore
 		public static Dictionary<int, string> ExtractPairs(Language option)
 		{
 			string inputString;
+			byte[] stream = null;
 
 			switch (option)
 			{
@@ -34,7 +35,7 @@ namespace DicewareCore
 					inputString = Lists.dutch;
 					break;
 				case Language.English:
-					inputString = Encoding.UTF8.GetString(Lists.diceware_wordlist);
+					stream = Lists.diceware_wordlist;
 					break;
 				case Language.Esperanto:
 					inputString = Lists.esperanto;
@@ -73,9 +74,28 @@ namespace DicewareCore
 					inputString = Lists.turkish;
 					break;
 			}
-			
-			return new Dictionary<int, string>();
+
+			return ParseWordList(stream);
 		}
 
+		public static Dictionary<int, string> ParseWordList(byte[] input)
+		{
+			var result = new Dictionary<int, string>();
+
+			using (var reader = new StreamReader(new MemoryStream(input)))
+			{
+				while (!reader.EndOfStream)
+				{
+					var line = reader.ReadLine();
+
+					var index = line.Substring(0, 5);
+					var word = line.Substring(5, line.Length - 5).Remove(0, 1).Trim();
+
+					result.Add(int.Parse(index), word);
+				}
+			}
+
+			return result;
+		}
 	}
 }

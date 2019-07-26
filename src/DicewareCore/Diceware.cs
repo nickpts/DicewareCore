@@ -3,7 +3,6 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using System.Transactions;
 using Ventura;
 using Ventura.Interfaces;
 
@@ -72,7 +71,6 @@ namespace DicewareCore
 
 			for (int i = 0; i < 5; i++)
 			{
-
 				index += prng.Next(1, 7) * multiplier;
 				multiplier /= 10;
 			}

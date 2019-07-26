@@ -161,10 +161,7 @@ namespace DicewareCore {
         ///11164  7000e
         ///11165  8000e
         ///11166  9000e
-        ///11211  abatible
-        ///11212  abriac
-        ///11213  abrigall
-        ///112 [rest of string was truncated]&quot;;.
+        ///11211  aba [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string catalan {
             get {
@@ -557,12 +554,7 @@ namespace DicewareCore {
         ///11225 1700
         ///11226 18
         ///11231 1800
-        ///11232 19
-        ///11233 1900
-        ///11234 1910
-        ///11235 1920
-        ///11236 1925
-        ///1 [rest of string was truncated]&quot;;.
+        ///11232 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string hungarian_diceware {
             get {
