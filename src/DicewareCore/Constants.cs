@@ -4,8 +4,8 @@
 	{
 		Basque,
 		Catalan,
-		Chinese,
-		Czech,
+		//Chinese,
+        //Czech,
 		Danish,
 		Dutch,
 		English,

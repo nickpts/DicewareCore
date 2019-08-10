@@ -17,24 +17,17 @@ namespace DicewareCore
 		/// <summary>
 		/// 
 		/// </summary>
-		private readonly IRNGVenturaServiceProvider prng;
+		private readonly IRNGVenturaProvider prng;
 
 		/// <summary>
 		/// Initialises Ventura and seed stream. By default Ventura is
 		/// created with a seed from a SHA256 hash in a memory stream,
 		/// AES and both local and remote entropy sources
 		/// </summary>
-		public Diceware()
-		{
-			var seedStream = SerializeToStream(SeedGenerator.GetSeed());
+		public Diceware() => prng = RNGVenturaProviderFactory.Create(new MemoryStream(), Cipher.Aes, ReseedEntropySourceGroup.Local);
+        
 
-			prng = RNGVenturaServiceProviderFactory.Create(
-				seedStream, 
-				Cipher.Aes, 
-				ReseedEntropySourceGroup.Full);
-		}
-
-		public Diceware(IRNGVenturaServiceProvider prng)
+		public Diceware(IRNGVenturaProvider prng)
 		{
 			if (prng == null)
 				throw new ArgumentNullException(nameof(prng));
@@ -42,12 +35,13 @@ namespace DicewareCore
 			this.prng = prng;
 		}
 
-		/// <summary>
-		/// Generates a passphrase using the Diceware technique
-		/// </summary>
-		/// <param name="wordNo">number of words to generated</param>
-		/// <param name="language">language </param>
-		public string Create(int wordNo, Language language = Language.English)
+        /// <summary>
+        /// Generates a passphrase using the Diceware technique
+        /// </summary>
+        /// <param name="wordNo">number of words to generate, hard limit of 20</param>
+        /// <param name="language">language </param>
+        /// <param name="separator">word separator</param>
+        public string Create(int wordNo, Language language = Language.English, char separator = ' ')
 		{
 			if (wordNo <= 0 || wordNo >= 20)
 				throw new ArgumentException(nameof(wordNo));
@@ -59,7 +53,12 @@ namespace DicewareCore
 			{
 				int roll = MakeRoll();
 				password.Append(dictionary[roll]);
-			}
+
+                if (i < wordNo - 1)
+                {
+                    password.Append(separator);
+                }
+            }
 
 			return password.ToString();
 		}
@@ -85,14 +84,6 @@ namespace DicewareCore
 
 		#region Private implementation
 
-		private MemoryStream SerializeToStream(object objectType)
-		{
-			MemoryStream stream = new MemoryStream();
-			IFormatter formatter = new BinaryFormatter();
-			formatter.Serialize(stream, objectType);
-			return stream;
-		}
-
-		#endregion
+        #endregion
 	}
 }

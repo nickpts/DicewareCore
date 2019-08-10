@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using DicewareCore;
 using NUnit.Framework;
 using Ventura.Interfaces;
@@ -17,7 +18,7 @@ namespace Tests
 		[Test]
 		public void Diceware_Constructor_Throws_Exception_If_InputNull()
 		{
-			IRNGVenturaServiceProvider prng = null;
+			IRNGVenturaProvider prng = null;
 
 			Assert.Throws<ArgumentNullException>(() => new Diceware(prng));
 		}
@@ -42,9 +43,19 @@ namespace Tests
 		}
 
 		[Test]
-		public void Diceware_Create_Generated_Correct_Passphrase()
+		public void Diceware_Create_Generates_Correct_Passphrase()
 		{
-			var pass = generator.Create(19);
+            foreach (var value in Enum.GetValues(typeof(Language)))
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    var pass = generator.Create(10, Language.Estonian, '-');
+                    Debug.WriteLine(pass);
+                }
+            }
+
+            //TODO: chinese is weird
+            //TODO : czech dictionary missing
 		}
 	}
 }

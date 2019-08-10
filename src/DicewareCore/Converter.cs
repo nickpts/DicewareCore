@@ -11,91 +11,108 @@ namespace DicewareCore
 	{
 		public static Dictionary<int, string> ExtractPairs(Language option)
 		{
-			string inputString;
-			byte[] stream = null;
-
 			switch (option)
 			{
 				case Language.Basque:
-					inputString = Lists.basque;
-					break;
-				case Language.Catalan:
-					inputString = Lists.catalan;
-					break;
-				case Language.Chinese:
-					inputString = Encoding.UTF8.GetString(Lists.pinyin);
-					break;
-				case Language.Czech:
-					inputString = Lists.czech;
-					break;
-				case Language.Danish:
-					inputString = Lists.danish;
-					break;
-				case Language.Dutch:
-					inputString = Lists.dutch;
-					break;
-				case Language.English:
-					stream = Lists.diceware_wordlist;
-					break;
-				case Language.Esperanto:
-					inputString = Lists.esperanto;
-					break;
-				case Language.Estonian:
-					inputString = Lists.estonian;
-					break;
-				case Language.French:
-					inputString = Encoding.UTF8.GetString(Lists.francais_wordlist);
-					break;
-				case Language.German:
-					inputString = Lists.german;
-					break;
-				case Language.Hungarian:
-					inputString = Lists.hungarian_diceware;
-					break;
-				case Language.Italian:
-					inputString = Lists.italian;
-					break;
-				case Language.Latin:
-					inputString = Encoding.UTF8.GetString(Lists.diceware_latin_txt);
-					break;
-				case Language.Japanese:
-					inputString = Lists.japanese;
-					break;
-				case Language.Spanish:
-					inputString = Lists.spanish;
-					break;
-				case Language.Russian:
-					inputString = Lists.russian;
-					break;
-				case Language.Swedish:
-					inputString = Lists.swedish;
-					break;
-				case Language.Turkish:
-					inputString = Lists.turkish;
-					break;
-			}
+                    return ParseWordList(Lists.basque);
 
-			return ParseWordList(stream);
-		}
+                case Language.Catalan:
+                    return ParseWordList(Lists.catalan);
+
+                //case Language.Chinese:
+                //    return ParseWordList(Lists.pinyin);
+
+                //case Language.Czech:
+                //    return ParseWordList(Lists.czech);
+                    
+				case Language.Danish:
+                    return ParseWordList(Lists.danish);
+
+                case Language.Dutch:
+                    return ParseWordList(Lists.dutch);
+
+                case Language.English:
+                    return ParseWordList(Lists.diceware_wordlist);
+
+                case Language.Esperanto:
+                    return ParseWordList(Lists.esperanto);
+
+                case Language.Estonian:
+                    return ParseWordList(Lists.estonian);
+
+                case Language.French:
+                    return ParseWordList(Lists.francais_wordlist);
+
+                case Language.German:
+                    return ParseWordList(Lists.german);
+
+                case Language.Hungarian:
+                    return ParseWordList(Lists.hungarian_diceware);
+
+                case Language.Italian:
+                    return ParseWordList(Lists.italian);
+
+                case Language.Latin:
+                    return ParseWordList(Lists.diceware_latin_txt);
+
+                case Language.Japanese:
+                    return ParseWordList(Lists.japanese);
+
+                case Language.Spanish:
+                    return ParseWordList(Lists.spanish);
+
+                case Language.Russian:
+                    return ParseWordList(Lists.russian);
+
+                case Language.Swedish:
+                    return ParseWordList(Lists.swedish);
+
+                case Language.Turkish:
+                    return ParseWordList(Lists.turkish);
+            }
+
+            throw new InvalidOperationException();
+        }
 
 		public static Dictionary<int, string> ParseWordList(byte[] input)
 		{
 			var result = new Dictionary<int, string>();
 
-			using (var reader = new StreamReader(new MemoryStream(input)))
-			{
-				while (!reader.EndOfStream)
-				{
-					var line = reader.ReadLine();
+            try
+            {
+                using (var reader = new StreamReader(new MemoryStream(input)))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
 
-					var index = line.Substring(0, 5);
-					var word = line.Substring(5, line.Length - 5).Remove(0, 1).Trim();
+                        if (string.IsNullOrEmpty(line))
+                            continue;
 
-					result.Add(int.Parse(index), word);
-				}
-			}
+                        var stringIndex = line.Substring(0, 5);
 
-			return result;
+                        if (!int.TryParse(stringIndex, out var index))
+                            continue; // this contains Hash/PGP information
+
+                        var word = line.Substring(5, line.Length - 5).Remove(0, 1).Trim();
+
+                        result.Add(index, word);
+                    }
+                }
+            }
+            catch (FormatException)
+            {
+
+            }
+
+            return result;
 		}
+
+        public static Dictionary<int, string> ParseWordList(string input)
+        {
+            byte[] byteArray = Encoding.UTF8.GetBytes(input);
+
+            return ParseWordList(byteArray);
+        }
 	}
 }
