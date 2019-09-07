@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using Ventura;
 using Ventura.Interfaces;
@@ -25,17 +23,10 @@ namespace DicewareCore
 		/// AES and both local and remote entropy sources
 		/// </summary>
 		public Diceware() => prng = RNGVenturaProviderFactory.Create(new MemoryStream(), Cipher.Aes, ReseedEntropySourceGroup.Local);
-        
+		
+		public Diceware(IRNGVenturaProvider prng) => this.prng = prng ?? throw new ArgumentNullException(nameof(prng));
 
-		public Diceware(IRNGVenturaProvider prng)
-		{
-			if (prng == null)
-				throw new ArgumentNullException(nameof(prng));
-
-			this.prng = prng;
-		}
-
-        /// <summary>
+		/// <summary>
         /// Generates a passphrase using the Diceware technique
         /// </summary>
         /// <param name="wordNo">number of words to generate, hard limit of 20</param>
