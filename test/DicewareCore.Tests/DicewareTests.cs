@@ -35,21 +35,38 @@ namespace Tests
 		[Test]
 		public void Diceware_Generated_Throws_Argument_Exception_If_Number_Of_Words_More_Than_Twenty() =>
 			Assert.Throws<ArgumentException>(() => generator.Create(21));
-		
+
 		[Test]
+		public void Diceware_Create_Includes_Specified_Separator()
+		{
+			var input = '!';
+			generator.Create(5, Language.English, input).Contains(input);
+		}
+
+		[Test]
+		public void Diceware_Create_Contains_Specified_Number_Of_Words()
+		{
+			var numberOfWords = 5;
+
+			var count = generator.Create(5, Language.English, '-').Split('-').Length;
+
+			Assert.AreEqual(numberOfWords, count);
+		}
+
+
+		[Test, Explicit]
 		public void Diceware_Create_Generates_Correct_Passphrase()
 		{
-            foreach (var value in Enum.GetValues(typeof(Language)))
-            {
-	            Debug.WriteLine(value.ToString());
-                for (int i = 0; i < 100; i++)
-                {
-                    var pass = generator.Create(10, (Language)value, '-');
-                    Debug.WriteLine(pass);
+			foreach (var value in Enum.GetValues(typeof(Language)))
+			{
+				Debug.WriteLine(value.ToString());
+				for (int i = 0; i < 100; i++)
+				{
+					var pass = generator.Create(10, (Language)value, '-');
+					Debug.WriteLine(pass);
 					Thread.Sleep(250);
-                }
-            }
-
+				}
+			}
 		}
 	}
 }
