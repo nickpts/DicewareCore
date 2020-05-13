@@ -1,20 +1,14 @@
-﻿using DicewareCore;
+﻿using System;
+using DicewareCore;
 using NUnit.Framework;
 
 namespace Tests
 {
 	public class ConverterTests
 	{
-		[SetUp]
-		public void Setup()
-		{
-
-		}
-
 		[Test]
-		public void Converter_Returns_Proper_WordList()
-		{
-			var list = Converter.ExtractPairs(Language.English);
-		}
+		public void Converter_Throws_Exception_If_Language_Not_Found() => 
+			Assert.Throws<ArgumentOutOfRangeException>(() => Converter.ExtractPairs((Language)600));
+		
 	}
 }

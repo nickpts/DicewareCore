@@ -18,8 +18,8 @@ namespace DicewareCore
 		/// created with a seed from a SHA256 hash in a memory stream,
 		/// AES and both local and remote entropy sources
 		/// </summary>
-		public Diceware() => prng = RNGVenturaProviderFactory.Create(new MemoryStream(), Cipher.Aes, ReseedEntropySourceGroup.Full);
-		
+		public Diceware() => prng = RNGVenturaProviderFactory.CreateSeeded(Cipher.Aes, ReseedEntropySourceGroup.Full);
+
 		public Diceware(IRNGVenturaProvider prng) => this.prng = prng ?? throw new ArgumentNullException(nameof(prng));
 
         public string Create(int wordNo, Language language = Language.English, char separator = ' ')

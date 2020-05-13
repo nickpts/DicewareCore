@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 
+[assembly: InternalsVisibleTo("DicewareCore.Tests")]
 namespace DicewareCore
 {
-	public class Converter
+	internal class Converter
 	{
 		public static Dictionary<int, string> ExtractPairs(Language option) => option switch
 		{
@@ -18,7 +20,7 @@ namespace DicewareCore
 			Language.English => ParseWordList(Lists.diceware_wordlist),
 			Language.Esperanto => ParseWordList(Lists.esperanto),
 			Language.Estonian => ParseWordList(Lists.estonian),
-			Language.French => ParseWordList(Lists.francais_wordlist),
+			Language.French => ParseWordList(Lists.francais_wordlist),	
 			Language.German => ParseWordList(Lists.german),
 			Language.Hungarian => ParseWordList(Lists.hungarian_diceware),
 			Language.Italian => ParseWordList(Lists.italian),
@@ -31,7 +33,7 @@ namespace DicewareCore
 			_ => throw new ArgumentOutOfRangeException(nameof(option), option, null)
 		};
 
-		public static Dictionary<int, string> ParseWordList(byte[] input)
+		private static Dictionary<int, string> ParseWordList(byte[] input)
 		{
 			var result = new Dictionary<int, string>();
 
@@ -56,7 +58,7 @@ namespace DicewareCore
 			return result;
 		}
 
-		public static Dictionary<int, string> ParseWordList(string input)
+		private static Dictionary<int, string> ParseWordList(string input)
 		{
 			byte[] byteArray = Encoding.UTF8.GetBytes(input);
 

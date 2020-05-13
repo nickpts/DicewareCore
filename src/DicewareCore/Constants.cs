@@ -23,7 +23,7 @@
 		Turkish
 	}
 
-	public static class Constants
+	internal static class Constants
 	{
 		/// <summary>
 		/// The look up digit length in the Diceware Word List

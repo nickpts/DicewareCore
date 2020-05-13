@@ -13,7 +13,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-    <PackageReference Include="Ventura" Version="1.1.1" />
+    <PackageReference Include="Ventura" Version="1.1.2" />
   </ItemGroup>
 
   <ItemGroup>

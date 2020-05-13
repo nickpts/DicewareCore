@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ventura" Version="1.1.1" />
+    <PackageReference Include="Ventura" Version="1.1.2" />
   </ItemGroup>
 
   <ItemGroup>
