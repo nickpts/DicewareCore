@@ -6,31 +6,12 @@ using Ventura.Interfaces;
 
 namespace DicewareCore
 {
-	/* Diceware™
-	 *
-	 *
-	 */
 	public class Diceware: IDiceware, IDisposable
 	{
 		/// <summary>
 		/// Pseudo-random number generator 
 		/// </summary>
 		private readonly IRNGVenturaProvider prng;
-
-		/// <summary>
-		/// The look up digit length in the Diceware Word List
-		/// </summary>
-		private const int LookupDigitLength = 5;
-
-		/// <summary>
-		/// Lower possible roll value according to Diceware rules
-		/// </summary>
-		private const int LowestPossibleRoll = 1;
-
-		/// <summary>
-		/// Highest possible roll value according to Diceware rules
-		/// </summary>
-		private const int HighestPossibleRoll = 6;
 
 		/// <summary>
 		/// Initialises Ventura and seed stream. By default Ventura is
@@ -70,9 +51,9 @@ namespace DicewareCore
 			int index = 0;
 			int multiplier = 10_000;
 
-			for (int i = 0; i < LookupDigitLength; i++)
+			for (int i = 0; i < Constants.LookupDigitLength; i++)
 			{
-				index += prng.Next(LowestPossibleRoll, HighestPossibleRoll + 1) * multiplier;
+				index += prng.Next(Constants.LowestPossibleRoll, Constants.HighestPossibleRoll + 1) * multiplier;
 				multiplier /= 10;
 			}
 

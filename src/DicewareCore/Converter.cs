@@ -78,30 +78,24 @@ namespace DicewareCore
 		{
 			var result = new Dictionary<int, string>();
 
-			try
+			using var reader = new StreamReader(new MemoryStream(input));
+			while (!reader.EndOfStream)
 			{
-				using var reader = new StreamReader(new MemoryStream(input));
-				while (!reader.EndOfStream)
-				{
-					var line = reader.ReadLine();
+				var line = reader.ReadLine();
 
-					if (string.IsNullOrEmpty(line))
-						continue;
+				if (string.IsNullOrEmpty(line))
+					continue;
 
-					var stringIndex = line.Substring(0, 5);
+				var stringIndex = line.Substring(0, 5);
 
-					if (!int.TryParse(stringIndex, out var index))
-						continue; // this contains Hash/PGP information
+				if (!int.TryParse(stringIndex, out var index))
+					continue; // this contains Hash/PGP information
 
-					var word = line.Substring(5, line.Length - 5).Remove(0, 1).Trim();
+				var word = line.Substring(5, line.Length - 5).Remove(0, 1).Trim();
 
-					result.Add(index, word);
-				}
+				result.Add(index, word);
 			}
-			catch (FormatException) //TODO
-			{
 
-			}
 
 			return result;
 		}
