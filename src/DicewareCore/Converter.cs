@@ -1,78 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
-
 
 namespace DicewareCore
 {
 	public class Converter
 	{
-		public static Dictionary<int, string> ExtractPairs(Language option)
+		public static Dictionary<int, string> ExtractPairs(Language option) => option switch
 		{
-			switch (option)
-			{
-				case Language.Basque:
-					return ParseWordList(Lists.basque);
-
-				case Language.Catalan:
-					return ParseWordList(Lists.catalan);
-
-				case Language.Chinese:
-					return ParseWordList(Lists.pinyin);
-
-				case Language.Czech:
-					return ParseWordList(Lists.czech);
-
-				case Language.Danish:
-					return ParseWordList(Lists.danish);
-
-				case Language.Dutch:
-					return ParseWordList(Lists.dutch);
-
-				case Language.English:
-					return ParseWordList(Lists.diceware_wordlist);
-
-				case Language.Esperanto:
-					return ParseWordList(Lists.esperanto);
-
-				case Language.Estonian:
-					return ParseWordList(Lists.estonian);
-
-				case Language.French:
-					return ParseWordList(Lists.francais_wordlist);
-
-				case Language.German:
-					return ParseWordList(Lists.german);
-
-				case Language.Hungarian:
-					return ParseWordList(Lists.hungarian_diceware);
-
-				case Language.Italian:
-					return ParseWordList(Lists.italian);
-
-				case Language.Latin:
-					return ParseWordList(Lists.diceware_latin_txt);
-
-				case Language.Japanese:
-					return ParseWordList(Lists.japanese);
-
-				case Language.Spanish:
-					return ParseWordList(Lists.spanish);
-
-				case Language.Russian:
-					return ParseWordList(Lists.russian);
-
-				case Language.Swedish:
-					return ParseWordList(Lists.swedish);
-
-				case Language.Turkish:
-					return ParseWordList(Lists.turkish);
-			}
-
-			throw new InvalidOperationException();
-		}
+			Language.Basque => ParseWordList(Lists.basque),
+			Language.Catalan => ParseWordList(Lists.catalan),
+			Language.Chinese => ParseWordList(Lists.pinyin),
+			Language.Czech => ParseWordList(Lists.czech),
+			Language.Danish => ParseWordList(Lists.danish),
+			Language.Dutch => ParseWordList(Lists.dutch),
+			Language.English => ParseWordList(Lists.diceware_wordlist),
+			Language.Esperanto => ParseWordList(Lists.esperanto),
+			Language.Estonian => ParseWordList(Lists.estonian),
+			Language.French => ParseWordList(Lists.francais_wordlist),
+			Language.German => ParseWordList(Lists.german),
+			Language.Hungarian => ParseWordList(Lists.hungarian_diceware),
+			Language.Italian => ParseWordList(Lists.italian),
+			Language.Japanese => ParseWordList(Lists.japanese),
+			Language.Latin => ParseWordList(Lists.diceware_latin_txt),
+			Language.Spanish => ParseWordList(Lists.spanish),
+			Language.Russian => ParseWordList(Lists.russian),
+			Language.Swedish => ParseWordList(Lists.swedish),
+			Language.Turkish => ParseWordList(Lists.turkish),
+			_ => throw new ArgumentOutOfRangeException(nameof(option), option, null)
+		};
 
 		public static Dictionary<int, string> ParseWordList(byte[] input)
 		{
@@ -95,7 +52,6 @@ namespace DicewareCore
 
 				result.Add(index, word);
 			}
-
 
 			return result;
 		}

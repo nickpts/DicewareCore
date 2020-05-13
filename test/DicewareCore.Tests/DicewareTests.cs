@@ -53,7 +53,6 @@ namespace Tests
 			Assert.AreEqual(numberOfWords, count);
 		}
 
-
 		[Test, Explicit]
 		public void Diceware_Create_Generates_Correct_Passphrase()
 		{
