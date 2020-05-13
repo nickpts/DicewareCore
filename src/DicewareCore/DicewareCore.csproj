@@ -6,7 +6,6 @@
     <Authors>Nick Patsaris</Authors>
     <Description>A .NET Standard library implementing the Diceware method for picking passphrases using the Ventura PRNG</Description>
     <Copyright>Copyright Nick Patsaris</Copyright>
-    <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/nickpts/DicewareCore</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nickpts/DicewareCore.git</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -14,9 +13,14 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <PackageIcon>dice.jpg</PackageIcon>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Nick\Dev\src\projects\DicewareCore\src\DicewareCore\DicewareCore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\Users\Nick\Dev\src\projects\DicewareCore\src\DicewareCore\DicewareCore.xml</DocumentationFile>
   </PropertyGroup>
 
@@ -41,6 +45,10 @@
 
   <ItemGroup>
     <None Include="..\..\dice.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\license.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
