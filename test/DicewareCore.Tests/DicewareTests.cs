@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Threading;
 using DicewareCore;
 using NUnit.Framework;
 using Ventura.Interfaces;
@@ -40,14 +41,15 @@ namespace Tests
 		{
             foreach (var value in Enum.GetValues(typeof(Language)))
             {
+	            Debug.WriteLine(value.ToString());
                 for (int i = 0; i < 100; i++)
                 {
-                    var pass = generator.Create(10, Language.Basque, '-');
+                    var pass = generator.Create(10, (Language)value, '-');
                     Debug.WriteLine(pass);
+					Thread.Sleep(250);
                 }
             }
 
-            //TODO: chinese is weird
 		}
 	}
 }

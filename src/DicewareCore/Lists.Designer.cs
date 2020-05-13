@@ -170,7 +170,59 @@ namespace DicewareCore {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 11111 0
+        ///11112 1
+        ///11113 2
+        ///11114 3
+        ///11115 4
+        ///11116 5
+        ///11121 6
+        ///11122 7
+        ///11123 8
+        ///11124 9
+        ///11125 10
+        ///11126 11
+        ///11131 12
+        ///11132 13
+        ///11133 14
+        ///11134 15
+        ///11135 16
+        ///11136 17
+        ///11141 18
+        ///11142 19
+        ///11143 20
+        ///11144 21
+        ///11145 22
+        ///11146 23
+        ///11151 24
+        ///11152 25
+        ///11153 26
+        ///11154 27
+        ///11155 28
+        ///11156 29
+        ///11161 30
+        ///11162 31
+        ///11163 32
+        ///11164 33
+        ///11165 34
+        ///11166 35
+        ///11211 36
+        ///11212 37
+        ///11213 38
+        ///11214 39
+        ///11215 40
+        ///11216 41
+        ///11221 42
+        ///11222 43
+        ///11223 44
+        ///11224 45
+        ///11225 46
+        ///11226 47
+        ///11231 48
+        ///11232 49
+        ///11233 50
+        ///11234 51
+        ///11 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string czech {
             get {
@@ -735,20 +787,54 @@ namespace DicewareCore {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -----BEGIN PGP SIGNED MESSAGE-----
-        ///Hash: SHA1
-        ///
-        ///
-        ///Este archivo DW-Español-1.txt contiene una lista original de 7.776
-        ///palabras distintas que facilita a usuarios hispanoparlantes generar
-        ///frases de paso fuertes,siguiendo la metodología de
-        ///Diceware(http://world.std.com/~reinhold/diceware.html).		
-        ///
-        ///Copyright © 2003 by Manuel Palao, CISM, CISA (manuel@palao.com). 
-        ///			
-        ///Reservados todos los derechos, salvo la autorización explícita que
-        ///figura a continuación:			
-        ///Se autoriza a copiar, distribuir y/o modifi [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 11111	0
+        ///11112	1
+        ///11113	2	
+        ///11114	3	
+        ///11115	4	
+        ///11116	5	
+        ///11121	6	
+        ///11122	7	
+        ///11123	8	
+        ///11124	9	
+        ///11125	10	
+        ///11126	11	
+        ///11131	12	
+        ///11132	13	
+        ///11133	14	
+        ///11134	15	
+        ///11135	16	
+        ///11136	17	
+        ///11141	18	
+        ///11142	19	
+        ///11143	20	
+        ///11144	21	
+        ///11145	22	
+        ///11146	23	
+        ///11151	24	
+        ///11152	25	
+        ///11153	26	
+        ///11154	27	
+        ///11155	28	
+        ///11156	29	
+        ///11161	30	
+        ///11162	31	
+        ///11163	32	
+        ///11164	33	
+        ///11165	34	
+        ///11166	35	
+        ///11211	36	
+        ///11212	37	
+        ///11213	38	
+        ///11214	39	
+        ///11215	40	
+        ///11216	41	
+        ///11221	42	
+        ///11222	43	
+        ///11223	44	
+        ///11224	45	
+        ///11225	46	
+        ///11226	4 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string spanish {
             get {

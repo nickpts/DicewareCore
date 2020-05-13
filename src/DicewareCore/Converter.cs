@@ -13,11 +13,11 @@ namespace DicewareCore
 		{
 			switch (option)
 			{
-				case Language.Basque:
-					return ParseWordList(Lists.basque);
+				//case Language.Basque:
+				//	return ParseWordList(Lists.basque);
 
-				case Language.Catalan:
-					return ParseWordList(Lists.catalan);
+				//case Language.Catalan:
+				//	return ParseWordList(Lists.catalan);
 
 				//case Language.Chinese:
 				//    return ParseWordList(Lists.pinyin);
@@ -25,38 +25,38 @@ namespace DicewareCore
 				//case Language.Czech:
 				//    return ParseWordList(Lists.czech);
 
-				case Language.Danish:
-					return ParseWordList(Lists.danish);
+				//case Language.Danish:
+				//	return ParseWordList(Lists.danish);
 
-				case Language.Dutch:
-					return ParseWordList(Lists.dutch);
+				//case Language.Dutch:
+				//	return ParseWordList(Lists.dutch);
 
 				case Language.English:
 					return ParseWordList(Lists.diceware_wordlist);
 
-				case Language.Esperanto:
-					return ParseWordList(Lists.esperanto);
+				//case Language.Esperanto:
+				//	return ParseWordList(Lists.esperanto);
 
-				case Language.Estonian:
-					return ParseWordList(Lists.estonian);
+				//case Language.Estonian:
+				//	return ParseWordList(Lists.estonian);
 
-				case Language.French:
-					return ParseWordList(Lists.francais_wordlist);
+				//case Language.French:
+				//	return ParseWordList(Lists.francais_wordlist);
 
-				case Language.German:
-					return ParseWordList(Lists.german);
+				//case Language.German:
+				//	return ParseWordList(Lists.german);
 
-				case Language.Hungarian:
-					return ParseWordList(Lists.hungarian_diceware);
+				//case Language.Hungarian:
+				//	return ParseWordList(Lists.hungarian_diceware);
 
-				case Language.Italian:
-					return ParseWordList(Lists.italian);
+				//case Language.Italian:
+				//	return ParseWordList(Lists.italian);
 
-				case Language.Latin:
-					return ParseWordList(Lists.diceware_latin_txt);
+				//case Language.Latin:
+				//	return ParseWordList(Lists.diceware_latin_txt);
 
-				case Language.Japanese:
-					return ParseWordList(Lists.japanese);
+				//case Language.Japanese:
+				//	return ParseWordList(Lists.japanese);
 
 				case Language.Spanish:
 					return ParseWordList(Lists.spanish);
