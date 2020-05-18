@@ -11,6 +11,9 @@ namespace DicewareCore
 		/// </summary>
 		private readonly RandomNumberGenerator prng;
 
+		/// <summary>
+		/// Initialises RNG
+		/// </summary>
 		public Diceware() => prng = new RNGCryptoServiceProvider();
 
 		public string Create(int wordNo, Language language = Language.English, char separator = ' ')
