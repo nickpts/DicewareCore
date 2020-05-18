@@ -7,10 +7,10 @@ A .NET Standard library implementing the [Diceware](https://theworld.com/~reinho
 ![Nuget](https://img.shields.io/nuget/v/Diceware.svg)
 
 ## Description
-Languages supported: 
+1. Languages supported: 
 Basque, Catalan, Czech, Danish, English, Latin, Dutch, Esperando, Estonian, Finnish, French, German, Hungarian, Italian, Japanese, Chinese (Pinyin), Russian, Spanish, Swedish, Turkish.
-
-By default rolls are made using .NET's RNGCryptoServiceProvider
+2. By default rolls are made using .NET's RNGCryptoServiceProvider
+3. All dictionaries are taken from the official Diceware page. 
 
 ## Example
 ```C#
