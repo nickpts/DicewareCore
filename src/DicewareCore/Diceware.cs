@@ -1,8 +1,6 @@
 ﻿using System;
-using System.IO;
+using System.Security.Cryptography;
 using System.Text;
-using Ventura;
-using Ventura.Interfaces;
 
 namespace DicewareCore
 {
@@ -11,18 +9,11 @@ namespace DicewareCore
 		/// <summary>
 		/// Pseudo-random number generator 
 		/// </summary>
-		private readonly IRNGVenturaProvider prng;
+		private readonly RandomNumberGenerator prng;
 
-		/// <summary>
-		/// Initialises Ventura and seed stream. By default Ventura is
-		/// created with a seed from a SHA256 hash in a memory stream,
-		/// AES and both local and remote entropy sources
-		/// </summary>
-		public Diceware() => prng = RNGVenturaProviderFactory.CreateSeeded(Cipher.Aes, ReseedEntropySourceGroup.Full);
+		public Diceware() => prng = new RNGCryptoServiceProvider();
 
-		public Diceware(IRNGVenturaProvider prng) => this.prng = prng ?? throw new ArgumentNullException(nameof(prng));
-
-        public string Create(int wordNo, Language language = Language.English, char separator = ' ')
+		public string Create(int wordNo, Language language = Language.English, char separator = ' ')
 		{
 			if (wordNo <= 0 || wordNo >= 20)
 				throw new ArgumentException(nameof(wordNo));
@@ -53,11 +44,21 @@ namespace DicewareCore
 
 			for (int i = 0; i < Constants.LookupDigitLength; i++)
 			{
-				index += prng.Next(Constants.LowestPossibleRoll, Constants.HighestPossibleRoll + 1) * multiplier;
+				index += Next(Constants.LowestPossibleRoll, Constants.HighestPossibleRoll + 1) * multiplier;
 				multiplier /= 10;
 			}
 
 			return index;
+		}
+
+		private int Next(int min, int max)
+		{
+			var data = new byte[4];
+			prng.GetBytes(data);
+
+			int num = Math.Abs(BitConverter.ToInt32(data, 0));
+
+			return (num % (max - min)) + min;
 		}
 
 		#endregion

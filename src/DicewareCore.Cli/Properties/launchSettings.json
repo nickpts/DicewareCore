@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DicewareCore.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "-w 5 -l English -s ,"
+    }
+  }
+}

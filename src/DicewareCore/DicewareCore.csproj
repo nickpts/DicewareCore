@@ -25,10 +25,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ventura" Version="1.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Lists.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

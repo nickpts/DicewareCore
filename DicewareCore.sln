@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{44178AFD-6BD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B1D3244C-020E-4972-A555-CE7B37BAFCA6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DicewareCore.Cli", "src\DicewareCore.Cli\DicewareCore.Cli.csproj", "{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{FB485E0F-BF94-495D-BCD7-886590FCE957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB485E0F-BF94-495D-BCD7-886590FCE957}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB485E0F-BF94-495D-BCD7-886590FCE957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A65DA8C0-0C21-4EBF-A218-F1752E44C70D} = {44178AFD-6BD3-4B19-BBB8-C605D18F0713}
 		{FB485E0F-BF94-495D-BCD7-886590FCE957} = {B1D3244C-020E-4972-A555-CE7B37BAFCA6}
+		{8CDFE668-5CCF-4FE9-B6E5-0181E1866DBB} = {44178AFD-6BD3-4B19-BBB8-C605D18F0713}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {925122C8-BCFB-4464-97AE-BE646695631A}

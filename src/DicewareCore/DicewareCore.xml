@@ -24,13 +24,6 @@
             Pseudo-random number generator 
             </summary>
         </member>
-        <member name="M:DicewareCore.Diceware.#ctor">
-            <summary>
-            Initialises Ventura and seed stream. By default Ventura is
-            created with a seed from a SHA256 hash in a memory stream,
-            AES and both local and remote entropy sources
-            </summary>
-        </member>
         <member name="M:DicewareCore.IDiceware.Create(System.Int32,DicewareCore.Language,System.Char)">
             <summary>
             Generates a passphrase using the Diceware technique
