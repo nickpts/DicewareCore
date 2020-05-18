@@ -4,14 +4,14 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Authors>Nick Patsaris</Authors>
-    <Description>A .NET Standard library implementing the Diceware method for picking passphrases using the Ventura PRNG</Description>
+    <Description>A .NET Standard library implementing the Diceware method for picking passphrases. Uses RNGCryptoServiceProvider by default</Description>
     <Copyright>Copyright Nick Patsaris</Copyright>
     <PackageProjectUrl>https://github.com/nickpts/DicewareCore</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nickpts/DicewareCore.git</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <PackageIcon>dice.jpg</PackageIcon>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
