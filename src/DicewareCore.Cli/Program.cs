@@ -21,9 +21,6 @@ namespace DicewareCore.Cli
 						return 0;
 					},
 					errs => 1);
-
-			Console.ReadLine();
-
 		}
 	}
 }
