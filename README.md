@@ -13,8 +13,10 @@ Basque, Catalan, Czech, Danish, English, Latin, Dutch, Esperando, Estonian, Finn
 By default rolls are made using .NET's RNGCryptoServiceProvider
 
 ## Example
+```C#
 using var dice = new Diceware();
 
 var pass = dice.Create(wordno: 5, language: Language.English, separator: '-');
 
 // pate-there-amok-mice-best
+```
