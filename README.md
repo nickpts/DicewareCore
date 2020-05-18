@@ -5,3 +5,16 @@ A .NET Standard library implementing the [Diceware](https://theworld.com/~reinho
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nickpatsaris/diceware.svg)
 ![Nuget](https://img.shields.io/nuget/v/Diceware.svg)
+
+## Description
+Languages supported: 
+Basque, Catalan, Czech, Danish, English, Latin, Dutch, Esperando, Estonian, Finnish, French, German, Hungarian, Italian, Japanese, Chinese (Pinyin), Russian, Spanish, Swedish, Turkish.
+
+By default rolls are made using .NET's RNGCryptoServiceProvider
+
+## Example
+using var dice = new Diceware();
+
+var pass = dice.Create(wordno: 5, language: Language.English, separator: '-');
+
+// pate-there-amok-mice-best
