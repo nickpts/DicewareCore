@@ -3,8 +3,8 @@
 
 A .NET Standard library implementing the [Diceware](https://theworld.com/~reinhold/diceware.html) passphrase generation scheme. 
 
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nickpatsaris/diceware.svg)
-![Nuget](https://img.shields.io/nuget/v/Diceware.svg)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nickpatsaris/dicewarecore)
+![Nuget](https://img.shields.io/nuget/v/DicewareCore)
 
 ## Description
 1. Languages supported: 
