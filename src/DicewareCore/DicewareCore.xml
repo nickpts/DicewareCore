@@ -24,6 +24,11 @@
             Pseudo-random number generator 
             </summary>
         </member>
+        <member name="M:DicewareCore.Diceware.#ctor">
+            <summary>
+            Initialises RNG
+            </summary>
+        </member>
         <member name="M:DicewareCore.IDiceware.Create(System.Int32,DicewareCore.Language,System.Char)">
             <summary>
             Generates a passphrase using the Diceware technique
