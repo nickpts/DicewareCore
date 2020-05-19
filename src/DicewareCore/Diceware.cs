@@ -16,6 +16,8 @@ namespace DicewareCore
 		/// </summary>
 		public Diceware() => prng = new RNGCryptoServiceProvider();
 
+		public Diceware(RandomNumberGenerator prng) => this.prng = prng ?? throw new ArgumentNullException(nameof(prng));
+		
 		public string Create(int wordNo, Language language = Language.English, char separator = ' ')
 		{
 			if (wordNo <= 0 || wordNo >= 20)
