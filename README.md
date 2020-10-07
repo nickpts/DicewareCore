@@ -1,5 +1,5 @@
 # DicewareCore
-![Alt_text](https://live.staticflickr.com/65535/49910157738_8c8643d0cb_q_d.jpg)
+![Alt_text](https://i.ibb.co/9YQpSXP/49910157738-eed914f57f-o.jpg)
 
 A .NET Standard library implementing the [Diceware](https://theworld.com/~reinhold/diceware.html) passphrase generation scheme. 
 
